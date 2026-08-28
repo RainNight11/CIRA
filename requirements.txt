@@ -1,0 +1,11 @@
+torch==2.1.2
+torchvision==0.16.2
+transformers==4.37.2
+tokenizers==0.15.2
+accelerate==0.21.0
+sentencepiece==0.1.99
+numpy==1.26.4
+Pillow==10.4.0
+tqdm==4.67.1
+requests==2.32.3
+shortuuid==1.0.13

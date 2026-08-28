@@ -3,16 +3,6 @@
 Official release code for **CIRA**, an adversarial attack against large
 vision-language models with visual-token compression.
 
-CIRA targets the visual-token routing used by VisionZip. It estimates the
-clean token order with a CLIP vision encoder, constructs a reversed routing
-target, and optimizes a bounded image perturbation. The evaluation script then
-compares LLaVA predictions on clean and adversarial images with and without
-VisionZip compression.
-
-This release contains the attack and inference code required to reproduce the
-experiments. Defense implementations, paper sources, model weights, data, and
-generated results are intentionally excluded.
-
 ## Contents
 
 ```text
@@ -103,14 +93,6 @@ CUDA_VISIBLE_DEVICES=0 python run_cira_eval.py \
 - `adv_acc`: accuracy after the full-token attack.
 - `asr`: full-token attack success rate over clean-correct samples.
 - `csfr`: compression-specific failure rate at a VisionZip budget.
-- `conditional_asr`: attack success after both clean full-token and clean
-  compressed predictions are correct.
-
-## Reproducibility
-
-Use `--seed` to fix the random seed. The default evaluation limit is 1,000
-samples and the default attack batch size is 2. Reduce `--num-samples` and
-`--steps` for an initial setup check before running the full evaluation.
 
 ## License
 
